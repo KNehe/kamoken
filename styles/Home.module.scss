@@ -90,7 +90,12 @@ $ul-hover-color: #16ffff;
             margin-top: 3em;
             border-radius: 50px;
             padding: 1em;
+            transition: background-color .8s;
         }
+        .intro_btn:hover{
+            background-color: #06207e;               
+        }
+
         .intro_btn span{
             color: #fff;
             text-align: center;
