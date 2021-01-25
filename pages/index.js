@@ -7,7 +7,7 @@ export default function Home() {
   const init_ul_sm_styles = {
     transform:'translateY(-300px)',
     transition: 'opacity 1s',
-    opacity:'0'
+    opacity:'0',
   }
 
   const [getUlSmStyles,setUlSmStyles] = useState(init_ul_sm_styles);
@@ -25,13 +25,7 @@ export default function Home() {
       opacity:'1'
     }
 
-    const hide_ul_sm_styles = {
-      transform:'translateY(-300px)',
-      transition: 'opacity 1s',
-      opacity:'0'
-    }
-
-    setUlSmStyles(getUlSmStyles.transform === 'translateY(-300px)'? show_ul_sm_styles : hide_ul_sm_styles)
+    setUlSmStyles(getUlSmStyles.transform === 'translateY(-300px)'? show_ul_sm_styles : init_ul_sm_styles)
 
   }
   return (
@@ -98,16 +92,22 @@ export default function Home() {
                 </ul>
 
             </nav>
+            
+            <div className={styles.intro_group}>
+              <div className={styles.intro_text}>
 
-            <div className={styles.intro_text}>
+                <p className={styles.intro_txt_lg}>WE FOCUS ON</p>
 
-              <p className={styles.intro_txt_lg}>WE FOCUS ON</p>
+                <p className={styles.intro_txt_lg}>YOUR FINANCIAL STABILITY</p>
 
-              <p className={styles.intro_txt_lg}>YOUR FINANCIAL STABILITY</p>
-
-              <p  className={styles.intro_txt_sm}>Let's do the maths together</p>
-               
-            </div> 
+                <p  className={styles.intro_txt_sm}>Let's do the maths together</p>
+                
+              </div> 
+            
+              <a className={styles.intro_btn}>
+                <span>Learn more &gt;</span>
+              </a>
+            </div>
         </div>
       
       </section>     

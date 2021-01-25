@@ -1,5 +1,5 @@
 $intro-background-color: rgba(0,0,0,.8);
-$humberger-icon-transition-time: .3s;
+$humberger-icon-transition-time: .5s;
 $ul-hover-color: #16ffff;
 
 .landing_section{
@@ -57,7 +57,7 @@ $ul-hover-color: #16ffff;
         }
         .ul_lg a{
             padding-right: 2em;
-            transition: color .3s ease-in;
+            transition: color .5s ease-in;
             font-size: 1.2em;
         }
 
@@ -65,9 +65,13 @@ $ul-hover-color: #16ffff;
             color: $ul-hover-color;
         }
 
-        .intro_text {
-            margin-top: 16%;
+        .intro_group{
+            position: absolute;
+	        top: 50%;
+	        transform: translateY(-50%);
+        }
 
+        .intro_text {
             .intro_txt_lg{
                 font-size: 3.2em;
                 font-weight: bold;
@@ -75,9 +79,21 @@ $ul-hover-color: #16ffff;
             }
             .intro_txt_sm{
                 color: #fff;
-                padding-top: 2em;
+                margin-top: 2em;
                 font-size: 1.3em;
             }
+        }
+
+        .intro_btn{
+            display: inline-block;
+            background-color: #0032FC;
+            margin-top: 3em;
+            border-radius: 50px;
+            padding: 1em;
+        }
+        .intro_btn span{
+            color: #fff;
+            text-align: center;
         }
     }
 }
@@ -92,37 +108,9 @@ $ul-hover-color: #16ffff;
     height: 100%;   
 }
 
-
-@media screen and (max-width:768px){
-
-    .navbar_lg{
-        display: none !important;
-    }
-    
-    .intro_text {
-        .intro_txt_lg{
-            font-size: 3em !important;
-        }           
-    }
- 
- }
-
-@media screen and (min-width:769px){
-
-    .navbar_sm{
-        display: none ;
-    }
-    
-        .title a{
-            margin-right: 1.2em;
-        }
-    
- 
- }
-
-
 .navbar_sm{
     padding-top: 1.5em;
+    position: relative;
     //styles for humbeger icon
     .group{
         display: flex;
@@ -162,9 +150,14 @@ $ul-hover-color: #16ffff;
      
     .ul_sm{
         border-bottom: 1px solid white;
+        position: absolute;
+        width: 100%;
+        background-color: rgba(0,0,0,.9);
+        z-index: 200;
     }
     .ul_sm a{
         color: #fff;
+        transition: color .5s ease-in;
         font-size: 1.2em;
     }
     .ul_sm li{
@@ -179,6 +172,63 @@ $ul-hover-color: #16ffff;
 .navbar_sm ul{
     list-style-type: none;
 }
+
+
+@media screen and (max-width:768px){
+
+    .navbar_lg{
+        display: none !important;
+    }
+    
+    .intro_text {
+        margin-top: 30% !important;
+        .intro_txt_lg{
+            font-size: 3em !important;
+        }           
+    }
+ 
+ }
+
+@media screen and (min-width:769px){
+
+    .navbar_sm{
+        display: none ;
+    }
+    
+        .title a{
+            margin-right: 1.2em;
+        }
+    
+ 
+ }
+
+ @media screen and (max-width:360px){
+    
+    .intro_text {
+        .intro_txt_lg{
+            font-size: 2.5em !important;
+        }           
+    }
+
+    .intro_btn{
+        padding: .5em !important;
+    }
+    .intro_btn span{
+        font-size: 1em !important;
+    }
+ 
+ }
+
+ @media screen and (max-width:320px){
+    
+    .intro_text {
+        .intro_txt_lg{
+            font-size: 2em !important;
+        }           
+    }
+ 
+ }
+
 
 
 
