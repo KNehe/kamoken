@@ -2,7 +2,8 @@ html,
 body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+   background-color: #ccc7c7;
+  }
 
 *, *::after {
   box-sizing: border-box;

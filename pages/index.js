@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { useState } from 'react'
 import styles from '../styles/Home.module.scss'
+import Services from '../components/services/services'
 
 export default function Home() {
 
@@ -111,6 +112,8 @@ export default function Home() {
         </div>
       
       </section>     
+      
+      <Services/>
     </>
    
   )
