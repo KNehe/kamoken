@@ -2,6 +2,8 @@ import Head from 'next/head'
 import { useState } from 'react'
 import styles from '../styles/Home.module.scss'
 import Services from '../components/services/services'
+import Clients from '../components/clients/clients'
+import About from '../components/about/about'
 
 export default function Home() {
 
@@ -114,6 +116,10 @@ export default function Home() {
       </section>     
       
       <Services/>
+
+      <Clients/>
+
+      <About/>
     </>
    
   )

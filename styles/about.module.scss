@@ -1,0 +1,35 @@
+.about_section{
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+
+    .section_title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    .title_text{
+        font-size: 2.5em;
+        position: relative;
+        padding-bottom: .1em;
+    }
+    .title_text::after{
+        content: '';
+        position: absolute;
+        border-bottom: 4px solid black;
+        width: 100px;
+        bottom: 0;
+        left: 50%;
+        margin-left: -50px;
+    }
+    
+    }
+
+    .about_div{
+        margin-top: 2em;
+        border-right: 1em solid #b16f6f;
+        border-left: 1em solid #b16f6f;
+        padding: 0em 1em;
+    }
+}
