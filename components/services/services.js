@@ -16,7 +16,7 @@ const Services = ()=>{
 
  return (
      <>
-     <section className={styles.services_section}>
+     <section className={styles.services_section} id='services_grid'>
 
          <div className={styles.section_title}>
             <h1 className={styles.title_text}>Services</h1>

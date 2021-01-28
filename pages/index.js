@@ -34,6 +34,14 @@ export default function Home() {
     setUlSmStyles(getUlSmStyles.transform === 'translateY(-300px)'? show_ul_sm_styles : init_ul_sm_styles)
 
   }
+
+  const onLinkClickedHandler = (event,linkId) =>{
+    event.preventDefault();
+
+    const id = linkId.replace('#','');
+    document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+  }
+
   return (
     <>
       <Head>
@@ -55,11 +63,10 @@ export default function Home() {
                 </div>
 
                 <ul className={styles.ul_lg}>
-                  <li><a>Home</a></li>
-                  <li><a>About</a></li>
-                  <li><a>Services</a></li>
-                  <li><a>Clients</a></li>
-                  <li><a>Contact</a></li>
+                  <li onClick={(event)=> onLinkClickedHandler(event,'#about')}><a>About</a></li>
+                  <li onClick={(event)=> onLinkClickedHandler(event,'#services_grid')}><a>Services</a></li>
+                  <li onClick={(event)=> onLinkClickedHandler(event,'#clients')}><a>Clients</a></li>
+                  <li onClick={(event)=> onLinkClickedHandler(event,'#contact')}><a>Contact</a></li>
                 </ul>
             </nav>
 
@@ -90,11 +97,10 @@ export default function Home() {
                   className={styles.ul_sm} 
                   style={getUlSmStyles}
                   >
-                  <li><a>Home</a></li>
-                  <li><a>About</a></li>
-                  <li><a>Services</a></li>
-                  <li><a>Clients</a></li>
-                  <li><a>Contact</a></li>
+                  <li onClick={(event)=> onLinkClickedHandler(event,'#about')}><a>About</a></li>
+                  <li onClick={(event)=> onLinkClickedHandler(event,'#services_grid')}><a>Services</a></li>
+                  <li onClick={(event)=> onLinkClickedHandler(event,'#clients')}><a>Clients</a></li>
+                  <li onClick={(event)=> onLinkClickedHandler(event,'#contact')}><a>Contact</a></li>
                 </ul>
 
             </nav>
@@ -110,7 +116,7 @@ export default function Home() {
                 
               </div> 
             
-              <a className={styles.intro_btn}>
+              <a className={styles.intro_btn}  onClick={(event)=> onLinkClickedHandler(event,'#services_grid')}>
                 <span>Learn more &gt;</span>
               </a>
             </div>

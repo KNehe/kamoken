@@ -2,7 +2,7 @@ import styles from '../../styles/contact.module.scss'
 
 export default function Contact(){
     return(
-        <section className={styles.contact_section}>
+        <section className={styles.contact_section} id='contact'>
 
         <div className={styles.section_title}>
            <h1 className={styles.title_text}>Contact</h1>

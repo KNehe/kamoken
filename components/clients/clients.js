@@ -4,7 +4,7 @@ const Clients  = () =>{
 
     return (
 
-        <section className={styles.clients_section}>
+        <section className={styles.clients_section} id='clients'>
 
             <div className={styles.section_title}>
             <h1 className={styles.title_text}>Some of our clients</h1>

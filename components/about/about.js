@@ -5,7 +5,7 @@ const About = ()=>{
 
    
     return (
-        <section className={styles.about_section}>
+        <section className={styles.about_section} id='about'>
 
             <div className={styles.section_title}>
                 <h1 className={styles.title_text}>About</h1>

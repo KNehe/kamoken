@@ -1,5 +1,5 @@
 .services_section{
-    margin-top: 2em;
+    margin-top: 3em;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
@@ -32,6 +32,7 @@
         grid-template-columns: repeat(auto-fit,minmax(240px, 1fr));
         gap: 1rem;
         grid-auto-rows: minmax(auto,1fr);
+        position: relative;
 
         .service{
             background-color: rgb(241, 233, 233);
