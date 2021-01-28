@@ -30,6 +30,14 @@
         margin-top: 2em;
         border-right: 1em solid #b16f6f;
         border-left: 1em solid #b16f6f;
-        padding: 0em 1em;
+        padding: 0em 2em;
     }
+}
+
+@media (max-width: 500px){
+   
+    .about_div{
+        padding: 0em 1em !important;
+    }
+
 }

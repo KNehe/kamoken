@@ -14,25 +14,25 @@ const Clients  = () =>{
                 
                 <div className={styles.client_group}>
                     <div className={styles.client}> 
-                        <p>Company A very long name</p>
+                        <p>Spotlight on Africa-Uganda Foundation</p>
                     </div>
                     <div className={styles.client}>
-                        <p>Hotel  C</p>
+                        <p>Mbale Foam Ltd</p>
                     </div>
                     <div className={styles.client}>
-                        <p>School  D</p>
+                        <p>St. Francis Secondary School for the Blind</p>
                     </div>
                 </div>
                             
                 <div className={styles.client_group}>
                     <div className={styles.client}>
-                        <p>Bank B</p>
+                        <p>Ngora Cooperatives Savings &amp; Credit Society Ltd</p>
                     </div>
                     <div className={styles.client}>
-                        <p>School  D</p>
+                        <p>Sipi River Lodge Ltd</p>
                     </div>
                     <div className={styles.client}>
-                        <p>School  D</p>
+                        <p>Kaguma Development Organisation (KADO)</p>
                     </div>
                 </div>
             
