@@ -6,7 +6,7 @@ const Services = ()=>{
     
     const services = ServicesData.map( service =>
         <Service
-            id={service.id}
+            key={service.id}
             serviceTitle={service.serviceTitle}
             serviceDescription={service.serviceDescription} 
             imageSrc={service.imageSrc}
