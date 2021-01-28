@@ -1,0 +1,30 @@
+.section_footer{
+    width: 100%;
+    text-align: center;
+    margin-top: 3em;
+    background-color: #000;
+    background-image: url('/landing_img.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    overflow: hidden;
+    height: 5em; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    p{
+        z-index: 100;
+    }
+}
+.section_footer::after{
+    content: '';
+    background-color: rgba(0,0,0,.8);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
+}

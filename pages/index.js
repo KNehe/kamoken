@@ -4,6 +4,9 @@ import styles from '../styles/Home.module.scss'
 import Services from '../components/services/services'
 import Clients from '../components/clients/clients'
 import About from '../components/about/about'
+import Contact from '../components/contact/contact'
+import  Footer from '../components/footer/footer'
+
 
 export default function Home() {
 
@@ -120,6 +123,10 @@ export default function Home() {
       <Clients/>
 
       <About/>
+
+      <Contact/>
+
+      <Footer/>
     </>
    
   )
