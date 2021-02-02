@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from '../../styles/contact.module.scss'
 import ProgressIndicator from '../progress_indicator/progress_indicator'
+import axios from 'axios';
 
 export default function Contact(){
 
@@ -111,12 +112,25 @@ export default function Contact(){
 
         if(validateForm()){
             setIsSendingEmail(true)
-            setMessage({type:'success', value:'Email sent'})
-            // TODO send data to server
-            setIsSendingEmail(false);
-            hideMessageAfter5Seconds();
-            setFormData({name:'',email:'',message:''})
             setErrorStyles({name:false, email:false, message: false});
+            
+            axios.post('https://kamoken-backend.herokuapp.com/api/v1/mail',{...formData, body:formData.message})
+            .then(res=>{
+                
+                setIsSendingEmail(false);
+                setFormData({name:'',email:'',message:''})
+                setMessage({value:res?.data?.message || 'Email sent', type: 'success'})
+                hideMessageAfter5Seconds();
+
+            })
+            .catch(error=>{
+
+                setFormData({name:'',email:'',message:''})
+                setIsSendingEmail(false);
+                setMessage({value: error?.response?.data?.message || 'An error occurred, try again later', type: 'error'});
+                hideMessageAfter5Seconds();  
+                              
+            });
 
         }
     }
