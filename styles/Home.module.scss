@@ -7,10 +7,19 @@ $ul-hover-color: #16ffff;
     height: 100vh;
     width: 100%; 
 
-    .title a{
-        font-size: 2em;
-        font-weight: 400;
+    .title{
+        display: flex;
+        align-items: center;
     }
+    .title img{
+        width: 100px;
+    }
+    .title a{
+        font-size: 1.5em;
+        font-weight: 500;
+        padding-left: .1em;
+    }
+
      //background image
     .landing_section_img{
         position: absolute;
@@ -220,6 +229,9 @@ $ul-hover-color: #16ffff;
     }
     .intro_btn span{
         font-size: 1em !important;
+    }
+    .title a{
+        font-weight: 400 !important;
     }
  
  }

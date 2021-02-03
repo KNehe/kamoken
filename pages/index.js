@@ -58,7 +58,7 @@ export default function Home({ API_END_POINT }) {
             <nav className={styles.navbar_lg}>
 
                 <div className={styles.title}>
-                  <img src="" alt='alt logo'/>
+                  <img src="./logo.svg" alt='KAMOKEN logo'/>
                   <a>KAMOKEN</a>
                 </div>
 
@@ -74,7 +74,7 @@ export default function Home({ API_END_POINT }) {
 
                <div className={styles.group}>
                   <div className={styles.title}>
-                    <img src="" alt='alt logo'/>
+                    <img src="./logo.svg" alt='KAMOKEN logo'/>
                     <a>KAMOKEN</a>
                   </div>
 
