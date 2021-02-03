@@ -3,7 +3,7 @@ import styles from '../../styles/contact.module.scss'
 import ProgressIndicator from '../progress_indicator/progress_indicator'
 import axios from 'axios';
 
-export default function Contact(){
+export default function Contact({ API_END_POINT }){
 
     const [formData, setFormData] = useState({
         name: '',
@@ -114,7 +114,7 @@ export default function Contact(){
             setIsSendingEmail(true)
             setErrorStyles({name:false, email:false, message: false});
             
-            axios.post('https://kamoken-backend.herokuapp.com/api/v1/mail',{...formData, body:formData.message})
+            axios.post(API_END_POINT,{...formData, body:formData.message})
             .then(res=>{
                 
                 setIsSendingEmail(false);
@@ -205,4 +205,15 @@ export default function Contact(){
 
     </section>
     )
+}
+
+export async function getStaticProps(){
+
+    const API_END_POINT = process.env.API_END_POINT;
+
+    return {
+        props: { API_END_POINT,
+        data: "fff data"
+     }
+    }
 }
