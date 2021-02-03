@@ -206,14 +206,3 @@ export default function Contact({ API_END_POINT }){
     </section>
     )
 }
-
-export async function getStaticProps(){
-
-    const API_END_POINT = process.env.API_END_POINT;
-
-    return {
-        props: { API_END_POINT,
-        data: "fff data"
-     }
-    }
-}
