@@ -8,7 +8,7 @@ import Contact from '../components/contact/contact'
 import  Footer from '../components/footer/footer'
 
 
-export default function Home() {
+export default function Home({ API_END_POINT }) {
 
   const init_ul_sm_styles = {
     transform:'translateY(-300px)',
@@ -130,12 +130,21 @@ export default function Home() {
 
       <About/>
 
-      <Contact/>
+      <Contact API_END_POINT={ API_END_POINT }/>
 
       <Footer/>
     </>
    
   )
+}
+
+export async function getStaticProps(){
+
+  const API_END_POINT = process.env.API_END_POINT;
+
+  return {
+      props: { API_END_POINT }
+  }
 }
 
 
