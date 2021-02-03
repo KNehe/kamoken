@@ -1,65 +1,150 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import { useState } from 'react'
+import styles from '../styles/Home.module.scss'
+import Services from '../components/services/services'
+import Clients from '../components/clients/clients'
+import About from '../components/about/about'
+import Contact from '../components/contact/contact'
+import  Footer from '../components/footer/footer'
 
-export default function Home() {
+
+export default function Home({ API_END_POINT }) {
+
+  const init_ul_sm_styles = {
+    transform:'translateY(-300px)',
+    transition: 'opacity 1s',
+    opacity:'0',
+  }
+
+  const [getUlSmStyles,setUlSmStyles] = useState(init_ul_sm_styles);
+  
+  const [isUlSmVisible,setUlSmVisibilty] = useState(false);
+ 
+  const onHumbergerIconClickedHandler = event =>{
+    event.preventDefault();
+
+    setUlSmVisibilty(!isUlSmVisible)
+    
+    const show_ul_sm_styles = {
+      transform:'translateY(20px)',
+      transition: 'opacity 1s',
+      opacity:'1'
+    }
+
+    setUlSmStyles(getUlSmStyles.transform === 'translateY(-300px)'? show_ul_sm_styles : init_ul_sm_styles)
+
+  }
+
+  const onLinkClickedHandler = (event,linkId) =>{
+    event.preventDefault();
+
+    const id = linkId.replace('#','');
+    document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+  }
+
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>Create Next App</title>
+        <title>KAMOKEN Certified Public Accountants</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <section className={styles.landing_section}>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <div className={styles.landing_section_img}></div>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <div className={styles.landing_section_inner}>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+            <nav className={styles.navbar_lg}>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+                <div className={styles.title}>
+                  <img src="" alt='alt logo'/>
+                  <a>KAMOKEN</a>
+                </div>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+                <ul className={styles.ul_lg}>
+                  <li onClick={(event)=> onLinkClickedHandler(event,'#about')}><a>About</a></li>
+                  <li onClick={(event)=> onLinkClickedHandler(event,'#services_grid')}><a>Services</a></li>
+                  <li onClick={(event)=> onLinkClickedHandler(event,'#clients')}><a>Clients</a></li>
+                  <li onClick={(event)=> onLinkClickedHandler(event,'#contact')}><a>Contact</a></li>
+                </ul>
+            </nav>
+
+            <nav className={styles.navbar_sm}>
+
+               <div className={styles.group}>
+                  <div className={styles.title}>
+                    <img src="" alt='alt logo'/>
+                    <a>KAMOKEN</a>
+                  </div>
+
+                  <div
+                      className={styles.humberger_icon}
+                      onClick={onHumbergerIconClickedHandler}
+                       >
+                        {!isUlSmVisible?
+                        <>
+                    <div className={styles.first_line}></div>
+                    <div className={styles.second_line}></div>
+                    <div className={styles.third_line}></div>
+                    </>:
+                    <div className={styles.close}>x</div>
+                    }
+                  </div>
+               </div>
+
+               <ul 
+                  className={styles.ul_sm} 
+                  style={getUlSmStyles}
+                  >
+                  <li onClick={(event)=> onLinkClickedHandler(event,'#about')}><a>About</a></li>
+                  <li onClick={(event)=> onLinkClickedHandler(event,'#services_grid')}><a>Services</a></li>
+                  <li onClick={(event)=> onLinkClickedHandler(event,'#clients')}><a>Clients</a></li>
+                  <li onClick={(event)=> onLinkClickedHandler(event,'#contact')}><a>Contact</a></li>
+                </ul>
+
+            </nav>
+            
+            <div className={styles.intro_group}>
+              <div className={styles.intro_text}>
+
+                <p className={styles.intro_txt_lg}>WE FOCUS ON</p>
+
+                <p className={styles.intro_txt_lg}>YOUR FINANCIAL STABILITY</p>
+
+                <p  className={styles.intro_txt_sm}>Let's do the maths together</p>
+                
+              </div> 
+            
+              <a className={styles.intro_btn}  onClick={(event)=> onLinkClickedHandler(event,'#services_grid')}>
+                <span>Learn more &gt;</span>
+              </a>
+            </div>
         </div>
-      </main>
+      
+      </section>     
+      
+      <Services/>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+      <Clients/>
+
+      <About/>
+
+      <Contact API_END_POINT={ API_END_POINT }/>
+
+      <Footer/>
+    </>
+   
   )
 }
+
+export async function getStaticProps(){
+
+  const API_END_POINT = process.env.API_END_POINT;
+
+  return {
+      props: { API_END_POINT }
+  }
+}
+
+
