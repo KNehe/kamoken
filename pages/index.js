@@ -40,6 +40,11 @@ export default function Home({ API_END_POINT }) {
 
     const id = linkId.replace('#','');
     document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+
+    if(isUlSmVisible){
+      setUlSmVisibilty(false);
+      setUlSmStyles(init_ul_sm_styles);
+    }
   }
 
   return (
