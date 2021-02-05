@@ -246,6 +246,15 @@ $ul-hover-color: #16ffff;
  
  }
 
+ @media (max-width: 480px){
+    .title img{
+        width: 80px !important;
+    }
+    .title a{
+        font-size: 1.3em !important;
+    }
+
+ }
 
 
 

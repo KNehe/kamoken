@@ -6,7 +6,7 @@ import Clients from '../components/clients/clients'
 import About from '../components/about/about'
 import Contact from '../components/contact/contact'
 import  Footer from '../components/footer/footer'
-
+import {useSpring,animated} from 'react-spring'
 
 export default function Home({ API_END_POINT }) {
 
@@ -46,6 +46,10 @@ export default function Home({ API_END_POINT }) {
       setUlSmStyles(init_ul_sm_styles);
     }
   }
+
+  const animation1 = useSpring({opacity: 1, from: {opacity: 0, transition: '1s'}})
+  const animation2 = useSpring({opacity: 1, from: {opacity: 0, transition: '2s'}})
+  const animation3 = useSpring({opacity: 1, from: {opacity: 0, transition: '3s'}})
 
   return (
     <>
@@ -112,18 +116,23 @@ export default function Home({ API_END_POINT }) {
             
             <div className={styles.intro_group}>
               <div className={styles.intro_text}>
+                <animated.p style={animation1} className={styles.intro_txt_lg}>
+                  WE FOCUS ON
+                </animated.p>
 
-                <p className={styles.intro_txt_lg}>WE FOCUS ON</p>
-
-                <p className={styles.intro_txt_lg}>YOUR FINANCIAL STABILITY</p>
-
-                <p  className={styles.intro_txt_sm}>Let's do the maths together</p>
+                <animated.p style={animation2} className={styles.intro_txt_lg}>
+                 YOUR FINANCIAL STABILITY
+                </animated.p>
+                
+                <animated.p  style={animation3} className={styles.intro_txt_sm}>
+                  Let's do the maths together
+                </animated.p>
                 
               </div> 
             
-              <a className={styles.intro_btn}  onClick={(event)=> onLinkClickedHandler(event,'#services_grid')}>
+              <animated.a style={animation3}className={styles.intro_btn}  onClick={(event)=> onLinkClickedHandler(event,'#services_grid')}>
                 <span>Learn more &gt;</span>
-              </a>
+              </animated.a>
             </div>
         </div>
       
