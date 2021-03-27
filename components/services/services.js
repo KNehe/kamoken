@@ -19,7 +19,7 @@ const Services = ()=>{
      <section className={styles.services_section} id='services_grid'>
 
          <div className={styles.section_title}>
-            <h1 className={styles.title_text}>Services</h1>
+            <h2 className={styles.title_text}>Services</h2>
          </div>
 
          <div className={styles.services_grid}>

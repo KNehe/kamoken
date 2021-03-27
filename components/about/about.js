@@ -8,7 +8,7 @@ const About = ()=>{
         <section className={styles.about_section} id='about'>
 
             <div className={styles.section_title}>
-                <h1 className={styles.title_text}>About</h1>
+                <h2 className={styles.title_text}>About</h2>
             </div>
 
             <div className={styles.about_div}>
