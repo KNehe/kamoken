@@ -56,6 +56,23 @@ export default function Home({ API_END_POINT }) {
       <Head>
         <title>KAMOKEN Certified Public Accountants</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Kamoken is a fast growing financial services firm run by professionally qualified Accountants. The firm was first established in April, 2011 under the name KAMOKEN Certified Public Accountant, Auditor and Consultant. The firm helps its clients build value, manage risks and improve their performance. The firm offers high quality service to clients and has demonstrated its capability in carrying out effectively a wide variety of audit, consultancy, and other related professional services."/>
+        <meta name="keywords" content="Certified Public Accountant,KAMOKEN, Audit, Taxation, Consultancy, Financial Management, Human Resource management and recruitment,Restructuring, Accountant, Kenan Kamolu, CPA, ICPA"/>
+        <meta name="author" content="Kenan Kamolu, Co-authored by Nehemiah Kamolu"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        {/* Twitter card */}
+        <meta name="twitter:card" content="summary"></meta>
+        <meta name="twitter:image" content='https://res.cloudinary.com/nehe/image/upload/v1616868127/KAMOKEN/KAMOKEN_screenshot_sr6jqc.png'></meta>
+        <meta name="twitter:image:alt" content='KAMOKEN landing page'></meta>
+        <meta name="twitter:title" content='KAMOKEN Certified Public Accountant'></meta>
+        <meta name="twitter:description" content='Kamoken is a fast growing financial services firm run by professionally qualified Accountants. The firm helps its clients build value, manage risks and improve their performance and has demonstrated its capability in carrying out effectively a wide variety of audit, consultancy, and other related professional services.'></meta>
+        <meta name="twitter:url" content='https://kamoken.org/'></meta>
+        {/* Open graph */}
+        <meta property='og:title'  content='KAMOKEN Certified Public Accountant'/>
+        <meta property='og:image' content='https://res.cloudinary.com/nehe/image/upload/v1616868127/KAMOKEN/KAMOKEN_screenshot_sr6jqc.png'/>
+        <meta property='og:description' content='Kamoken is a fast growing financial services firm run by professionally qualified Accountants. The firm helps its clients build value, manage risks and improve their performance and has demonstrated its capability in carrying out effectively a wide variety of audit, consultancy, and other related professional services.'/>
+        <meta property='og:url' content='https://kamoken.org/'/>
+        <meta property='og:type' content='website' />
       </Head>
       
       <main>
