@@ -47,9 +47,9 @@ export default function Home({ API_END_POINT }) {
     }
   }
 
-  const animation1 = useSpring({opacity: 1, from: {opacity: 0, transition: '1s'}})
-  const animation2 = useSpring({opacity: 1, from: {opacity: 0, transition: '2s'}})
-  const animation3 = useSpring({opacity: 1, from: {opacity: 0, transition: '3s'}})
+  const animation1 = useSpring({opacity: 1, from: {opacity: 0, transition: '.25s'}})
+  const animation2 = useSpring({opacity: 1, from: {opacity: 0, transition: '.5s'}})
+  const animation3 = useSpring({opacity: 1, from: {opacity: 0, transition: '1s'}})
 
   return (
     <>
