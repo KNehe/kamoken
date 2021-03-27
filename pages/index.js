@@ -122,9 +122,9 @@ export default function Home({ API_END_POINT }) {
                     WE FOCUS ON
                   </animated.p>
 
-                  <animated.p style={animation2} className={styles.intro_txt_lg}>
+                  <animated.h1 style={animation2} className={styles.intro_txt_lg}>
                   YOUR FINANCIAL STABILITY
-                  </animated.p>
+                  </animated.h1>
                   
                   <animated.p  style={animation3} className={styles.intro_txt_sm}>
                     Let's do the maths together
