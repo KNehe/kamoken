@@ -139,7 +139,7 @@ export default function Contact({ API_END_POINT }){
         <section className={styles.contact_section} id='contact'>
 
         <div className={styles.section_title}>
-           <h1 className={styles.title_text}>Contact</h1>
+           <h2 className={styles.title_text}>Contact</h2>
         </div>
 
         <div className={styles.contact_grid}>
